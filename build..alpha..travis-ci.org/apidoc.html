@@ -1,0 +1,626 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api-documentation for
+    <a
+
+        href="https://github.com/VFK/gulp-html-replace#readme"
+
+    >gulp-html-replace (v1.6.2)</a>
+</h1>
+<h4>Replace build blocks in HTML. Like useref but done right.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace">module gulp-html-replace</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.block">
+            function <span class="apidocSignatureSpan">gulp-html-replace.</span>block
+            <span class="apidocSignatureSpan">(config, file, match)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.parser">
+            function <span class="apidocSignatureSpan">gulp-html-replace.</span>parser
+            <span class="apidocSignatureSpan">(tasks, config, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-html-replace.</span>block.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-html-replace.</span>common</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">gulp-html-replace.</span>parser.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace.block">module gulp-html-replace.block</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.block.block">
+            function <span class="apidocSignatureSpan">gulp-html-replace.</span>block
+            <span class="apidocSignatureSpan">(config, file, match)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace.block.prototype">module gulp-html-replace.block.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.block.prototype.build">
+            function <span class="apidocSignatureSpan">gulp-html-replace.block.prototype.</span>build
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.block.prototype.compile">
+            function <span class="apidocSignatureSpan">gulp-html-replace.block.prototype.</span>compile
+            <span class="apidocSignatureSpan">(tasks)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace.common">module gulp-html-replace.common</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.common.parseTasks">
+            function <span class="apidocSignatureSpan">gulp-html-replace.common.</span>parseTasks
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.common.regexMatchAll">
+            function <span class="apidocSignatureSpan">gulp-html-replace.common.</span>regexMatchAll
+            <span class="apidocSignatureSpan">(string, regexp)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace.parser">module gulp-html-replace.parser</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.parser.parser">
+            function <span class="apidocSignatureSpan">gulp-html-replace.</span>parser
+            <span class="apidocSignatureSpan">(tasks, config, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.parser.super_">
+            function <span class="apidocSignatureSpan">gulp-html-replace.parser.</span>super_
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace.parser.prototype">module gulp-html-replace.parser.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.parser.prototype._transform">
+            function <span class="apidocSignatureSpan">gulp-html-replace.parser.prototype.</span>_transform
+            <span class="apidocSignatureSpan">(chunk, enc, done)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace" id="apidoc.module.gulp-html-replace">module gulp-html-replace</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.block" id="apidoc.element.gulp-html-replace.block">
+        function <span class="apidocSignatureSpan">gulp-html-replace.</span>block
+        <span class="apidocSignatureSpan">(config, file, match)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">block = function (config, file, match) {
+    this.replacement = match[0];
+    this.linefeed = match[1];
+    this.indent = match[2];
+    this.beginTag = match[3];
+    this.taskName = match[4];
+    this.originalContent = match[5];
+    this.endTag = match[6];
+
+    this.replacements = [];
+    this.config = config;
+    this.template = null;
+    this.file = file;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.parser" id="apidoc.element.gulp-html-replace.parser">
+        function <span class="apidocSignatureSpan">gulp-html-replace.</span>parser
+        <span class="apidocSignatureSpan">(tasks, config, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(tasks, config, file) {
+    Transform.call(this);
+
+    this.tasks = tasks;
+    this.config = config;
+    this.file = file;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace.block" id="apidoc.module.gulp-html-replace.block">module gulp-html-replace.block</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.block.block" id="apidoc.element.gulp-html-replace.block.block">
+        function <span class="apidocSignatureSpan">gulp-html-replace.</span>block
+        <span class="apidocSignatureSpan">(config, file, match)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">block = function (config, file, match) {
+    this.replacement = match[0];
+    this.linefeed = match[1];
+    this.indent = match[2];
+    this.beginTag = match[3];
+    this.taskName = match[4];
+    this.originalContent = match[5];
+    this.endTag = match[6];
+
+    this.replacements = [];
+    this.config = config;
+    this.template = null;
+    this.file = file;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace.block.prototype" id="apidoc.module.gulp-html-replace.block.prototype">module gulp-html-replace.block.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.block.prototype.build" id="apidoc.element.gulp-html-replace.block.prototype.build">
+        function <span class="apidocSignatureSpan">gulp-html-replace.block.prototype.</span>build
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">build = function () {
+    if (!this.replacements.length) {
+        return this.config.keepUnassigned ? [this.indent + this.originalContent.trim()] : [];
+    }
+
+    // get the replacement strings and do replacements for extensions
+    if (this.uniqueExts) {
+        var extname = path.extname(this.file.path);
+        var basename = path.basename(this.file.path, extname);
+
+        if (this.uniqueExts[&#x27;%f&#x27;]) {
+            this.uniqueExts[&#x27;%f&#x27;].value = basename;
+        }
+        if (this.uniqueExts[&#x27;%e&#x27;]) {
+            this.uniqueExts[&#x27;%e&#x27;].value = extname;
+        }
+
+        Object.keys(this.uniqueExts).forEach(function (key) {
+            var unique = this.uniqueExts[key];
+            this.template = this.template.replace(unique.regex, unique.value);
+        }.bind(this));
+    }
+
+    if (this.srcIsNull) {
+        return [this.indent + this.template];
+    }
+
+    return this.replacements.map(function (replacement) {
+        if (this.template) {
+            if (Array.isArray(replacement)) {
+                replacement.unshift(this.template);
+                return this.indent + util.format.apply(util, replacement);
+            } else {
+                return this.indent + util.format(this.template, replacement);
+            }
+        }
+
+        if (this.config.resolvePaths) {
+            var replacementPath = path.resolve(this.file.cwd, replacement);
+            replacement = path.relative(path.dirname(this.file.path), replacementPath);
+            replacement = slash(replacement);
+        }
+
+        var ext = replacement.split(&#x27;?&#x27;)[0].toLowerCase().split(&#x27;.&#x27;).pop();
+
+        if (ext === &#x27;js&#x27;) {
+            return util.format(&#x27;%s&#x3c;script src=&#x22;%s&#x22;&#x3e;&#x3c;/script&#x3e;&#x27;, this.indent, replacement);
+        } else if (ext === &#x27;css&#x27;) {
+            return util.format(&#x27;%s&#x3c;link rel=&#x22;stylesheet&#x22; href=&#x22;%s&#x22;&#x3e;&#x27;, this.indent, replacement);
+        }
+        return this.indent + replacement;
+    }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (task) {
+    this.replacements = task.src;
+    this.template = task.tpl;
+    this.uniqueExts = task.uni;
+    this.srcIsNull = task.srcIsNull;
+}
+
+var buildResult = this.<span class="apidocCodeKeywordSpan">build</span>();
+
+if (this.config.keepBlockTags) {
+    buildResult.unshift(this.indent + this.beginTag);
+    buildResult.push(this.indent + this.endTag);
+}
+
+buildResult.unshift(null);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.block.prototype.compile" id="apidoc.element.gulp-html-replace.block.prototype.compile">
+        function <span class="apidocSignatureSpan">gulp-html-replace.block.prototype.</span>compile
+        <span class="apidocSignatureSpan">(tasks)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (tasks) {
+    var task = tasks[this.taskName];
+
+    if (task) {
+        this.replacements = task.src;
+        this.template = task.tpl;
+        this.uniqueExts = task.uni;
+        this.srcIsNull = task.srcIsNull;
+    }
+
+    var buildResult = this.build();
+
+    if (this.config.keepBlockTags) {
+        buildResult.unshift(this.indent + this.beginTag);
+        buildResult.push(this.indent + this.endTag);
+    }
+
+    buildResult.unshift(null);
+    buildResult.push(null);
+
+    return buildResult.join(this.linefeed);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Parser.prototype._transform = function (chunk, enc, done) {
+    var content = chunk.toString(&#x27;utf8&#x27;);
+
+    var matches = common.regexMatchAll(content, regex);
+    matches.forEach(function (match) {
+        var block = new Block(this.config, this.file, match);
+        content = content.replace(block.replacement, function () {
+            return block.<span class="apidocCodeKeywordSpan">compile</span>(this.tasks)
+        }.bind(this));
+    }.bind(this));
+
+    done(null, content);
+};
+
+module.exports = Parser;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace.common" id="apidoc.module.gulp-html-replace.common">module gulp-html-replace.common</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.common.parseTasks" id="apidoc.element.gulp-html-replace.common.parseTasks">
+        function <span class="apidocSignatureSpan">gulp-html-replace.common.</span>parseTasks
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parseTasks = function (options) {
+    options = options || {};
+
+    var utilExtensions = /%f|%e/g;
+    var tasksByNames = {};
+
+    var tasksPromises = Object.keys(options).map(function (name) {
+
+        var task = {
+            src: [],
+            tpl: null,
+            uni: {},
+            srcIsNull: false
+        };
+
+        return Promise
+            .resolve()
+            .then(function () {
+                var item = options[name];
+                var src = typeof item.src !== &#x27;undefined&#x27; ? item.src : item;
+
+                return resolveSrcString(src)
+                  .then(function(srcStrings) {
+                      task.srcIsNull = srcStrings === null;
+                      task.src = task.src.concat(srcStrings);
+                      task.tpl = item.tpl;
+                  });
+            })
+            .then(function () {
+                var result;
+
+                while (result = utilExtensions.exec(task.tpl)) {
+                    var type = result[0];
+                    var unique = {};
+
+                    if (task.uni[type]) {
+                        continue;
+                    }
+
+                    unique.regex = new RegExp(result[0], &#x22;g&#x22;);
+                    unique.value = null;
+                    task.uni[type] = unique;
+                }
+            })
+            .then(function () {
+                tasksByNames[name] = task;
+            });
+    });
+
+    return Promise.all(tasksPromises)
+        .then(function() {
+           return tasksByNames;
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.common.regexMatchAll" id="apidoc.element.gulp-html-replace.common.regexMatchAll">
+        function <span class="apidocSignatureSpan">gulp-html-replace.common.</span>regexMatchAll
+        <span class="apidocSignatureSpan">(string, regexp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">regexMatchAll = function (string, regexp) {
+    var matches = [];
+    string.replace(regexp, function () {
+        var arr = Array.prototype.slice.call(arguments);
+        matches.push(arr);
+    });
+    return matches;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+this.file = file;
+}
+util.inherits(Parser, Transform);
+
+Parser.prototype._transform = function (chunk, enc, done) {
+var content = chunk.toString(&#x27;utf8&#x27;);
+
+var matches = common.<span class="apidocCodeKeywordSpan">regexMatchAll</span>(content, regex);
+matches.forEach(function (match) {
+    var block = new Block(this.config, this.file, match);
+    content = content.replace(block.replacement, function () {
+        return block.compile(this.tasks)
+    }.bind(this));
+}.bind(this));
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace.parser" id="apidoc.module.gulp-html-replace.parser">module gulp-html-replace.parser</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.parser.parser" id="apidoc.element.gulp-html-replace.parser.parser">
+        function <span class="apidocSignatureSpan">gulp-html-replace.</span>parser
+        <span class="apidocSignatureSpan">(tasks, config, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Parser(tasks, config, file) {
+    Transform.call(this);
+
+    this.tasks = tasks;
+    this.config = config;
+    this.file = file;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.parser.super_" id="apidoc.element.gulp-html-replace.parser.super_">
+        function <span class="apidocSignatureSpan">gulp-html-replace.parser.</span>super_
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Transform(options) {
+  if (!(this instanceof Transform)) return new Transform(options);
+
+  Duplex.call(this, options);
+
+  this._transformState = new TransformState(this);
+
+  var stream = this;
+
+  // start out asking for a readable event once data is transformed.
+  this._readableState.needReadable = true;
+
+  // we have implemented the _read method, and done the other things
+  // that Readable wants before the first _read call, so unset the
+  // sync guard flag.
+  this._readableState.sync = false;
+
+  if (options) {
+    if (typeof options.transform === &#x27;function&#x27;) this._transform = options.transform;
+
+    if (typeof options.flush === &#x27;function&#x27;) this._flush = options.flush;
+  }
+
+  // When the writable side finishes, then flush out anything remaining.
+  this.once(&#x27;prefinish&#x27;, function () {
+    if (typeof this._flush === &#x27;function&#x27;) this._flush(function (er, data) {
+      done(stream, er, data);
+    });else done(stream);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-html-replace.parser.prototype" id="apidoc.module.gulp-html-replace.parser.prototype">module gulp-html-replace.parser.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.parser.prototype._transform" id="apidoc.element.gulp-html-replace.parser.prototype._transform">
+        function <span class="apidocSignatureSpan">gulp-html-replace.parser.prototype.</span>_transform
+        <span class="apidocSignatureSpan">(chunk, enc, done)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_transform = function (chunk, enc, done) {
+    var content = chunk.toString(&#x27;utf8&#x27;);
+
+    var matches = common.regexMatchAll(content, regex);
+    matches.forEach(function (match) {
+        var block = new Block(this.config, this.file, match);
+        content = content.replace(block.replacement, function () {
+            return block.compile(this.tasks)
+        }.bind(this));
+    }.bind(this));
+
+    done(null, content);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
