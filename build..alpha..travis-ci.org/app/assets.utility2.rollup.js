@@ -11840,7 +11840,6 @@ header: '\
 {{/if env.npm_package_homepage}} \
 [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-{{env.npm_package_name}}.svg)](https://travis-ci.org/npmdoc/node-npmdoc-{{env.npm_package_name}}) \
 \n\
-\n\
 ## {{env.npm_package_description}} \
 \n\
 \n\
