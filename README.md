@@ -1,11 +1,13 @@
-# api documentation for  [gulp-html-replace (v1.6.2)](https://github.com/VFK/gulp-html-replace#readme)  [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-html-replace.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-html-replace)
+# api documentation for  [gulp-html-replace (v1.6.2)](https://github.com/VFK/gulp-html-replace#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-html-replace.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-html-replace) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-html-replace.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-html-replace)
 #### Replace build blocks in HTML. Like useref but done right.
 
 [![NPM](https://nodei.co/npm/gulp-html-replace.png?downloads=true)](https://www.npmjs.com/package/gulp-html-replace)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/screen-capture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp_html_replace_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/screenCapture.buildNpmdoc.browser.%2Fhome%2Ftravis%2Fbuild%2Fnpmdoc%2Fnode-npmdoc-gulp-html-replace%2Ftmp%2Fbuild%2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/apidoc.html)
 
-![package-listing](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/screen-capture.npmPackageListing.svg)
+![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/screenCapture.npmPackageListing.svg)
+
+![npmPackageDependencyTree](https://npmdoc.github.io/node-npmdoc-gulp-html-replace/build/screenCapture.npmPackageDependencyTree.svg)
 
 
 
