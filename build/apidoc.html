@@ -49,8 +49,6 @@
 <h1>api documentation for
     <a
 
-        href="https://github.com/VFK/gulp-html-replace#readme"
-
     >gulp-html-replace (v1.6.2)</a>
 </h1>
 <h4>Replace build blocks in HTML. Like useref but done right.</h4>
@@ -60,6 +58,15 @@
 ><h1>table of contents</h1></a><ol>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-html-replace">module gulp-html-replace</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-html-replace.gulp-html-replace">
+            function <span class="apidocSignatureSpan"></span>gulp-html-replace
+            <span class="apidocSignatureSpan">(options, userConfig)</span>
+            </a>
+
+        </li>
 
         <li>
 
@@ -195,6 +202,66 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-html-replace" id="apidoc.module.gulp-html-replace">module gulp-html-replace</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-html-replace.gulp-html-replace" id="apidoc.element.gulp-html-replace.gulp-html-replace">
+        function <span class="apidocSignatureSpan"></span>gulp-html-replace
+        <span class="apidocSignatureSpan">(options, userConfig)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">gulp-html-replace = function (options, userConfig) {
+    var tasksPromise = common.parseTasks(options);
+
+    var config = {
+        keepUnassigned: false,
+        keepBlockTags: false,
+        resolvePaths: false
+    };
+
+    if (typeof userConfig === &#x27;boolean&#x27;) {
+        config.keepUnassigned = userConfig;
+    } else if (typeof userConfig === &#x27;object&#x27;) {
+        objectAssign(config, userConfig);
+    }
+
+    return new Transform({
+        objectMode: true,
+        transform: function (file, enc, callback) {
+            tasksPromise
+                .then(function (tasks) {
+
+                    var parser = new Parser(clone(tasks), config, file);
+
+                    if (file.isBuffer()) {
+                        parser.write(file.contents);
+                        parser.end();
+
+                        var contents = new Buffer(0);
+                        parser.on(&#x27;data&#x27;, function (data) {
+                            contents = Buffer.concat([contents, data]);
+                        });
+                        parser.once(&#x27;end&#x27;, function () {
+                            file.contents = contents;
+                            callback(null, file);
+                        });
+                        return;
+                    }
+
+                    if (file.isStream()) {
+                        file.contents = file.contents.pipe(parser);
+                    }
+
+                    callback(null, file);
+                })
+            .catch(callback);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>

@@ -8,7 +8,7 @@
 <tspan x="10" y="90">  ├── bluebird@3.5.0 </tspan>
 <tspan x="10" y="106">  ├── clone@1.0.2 </tspan>
 <tspan x="10" y="122">  ├── object-assign@4.1.1 </tspan>
-<tspan x="10" y="138">  ├─┬ readable-stream@2.2.8 </tspan>
+<tspan x="10" y="138">  ├─┬ readable-stream@2.2.9 </tspan>
 <tspan x="10" y="154">  │ ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="170">  │ ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="186">  │ ├── inherits@2.0.3 </tspan>
